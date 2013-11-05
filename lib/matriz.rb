@@ -53,4 +53,18 @@ class Matriz
 		
 	end
 
+        # Resta de matrices
+        def -(o)
+
+                resta = Array.new(matriz.size - 1)
+                for i in 0...matriz.size
+			resta[i] = Array.new(matriz[i].size - 1)
+			for j in 0...matriz[i].size
+				resta[i][j] = matriz[i][j] - o.matriz[i][j]
+			end
+                end
+                Matriz.new(resta)
+
+        end
+
 end

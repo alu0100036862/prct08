@@ -30,6 +30,10 @@ describe Matriz do
 			(@matrizA + @matrizB).to_s.should == Matriz.new([[222,4], [6,8]]).to_s
 		end
 	  
+		it "Se debe poder restar dos matrices" do
+			(@matrizA - @matrizB).to_s.should == Matriz.new([[-220,0], [0,0]]).to_s
+		end
+	  
 	end
   
 end
