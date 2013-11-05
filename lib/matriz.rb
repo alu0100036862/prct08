@@ -68,6 +68,20 @@ class Matriz
 
         end
 
+        # Traspuesta de matriz
+        def trasp
+
+                traspuesta = Array.new(matriz.size - 1)
+                for i in 0...matriz.size
+                        traspuesta[i] = Array.new(matriz[i].size - 1)
+                        for j in 0...matriz[i].size
+                                traspuesta[i][j] = matriz[j][i]
+                        end
+                end
+                Matriz.new(traspuesta)
+
+        end
+
 	# Suma de matrices
 	def +(o)
 

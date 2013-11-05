@@ -12,6 +12,7 @@ describe Matriz do
 		@matrizB = Matriz.new(matB)
 
 	end
+
 	context 'comprobar los accessors' do
 
 		it "Se debe invocar al metodo matriz() para obtener la matriz" do
@@ -27,6 +28,7 @@ describe Matriz do
 		end
 
 	end
+
 	context 'Comprobar metodos de conversion' do
 
 		it "Se debe mostrar la matriz" do
@@ -44,6 +46,11 @@ describe Matriz do
 		it "Se debe convertir a su opuesta (negada)" do
 			(-@matrizA).to_s.should == Matriz.new([[-1,-2],[-3,-4]]).to_s
 		end 
+
+		it "Se debe convertir en la traspuesta" do
+			@matrizA.trasp.to_s.should == Matriz.new([[1,3],[2,4]]).to_s
+		end
+
 	end
 
 	context 'Comprobar los operaciones entre matrices' do
