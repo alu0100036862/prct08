@@ -23,5 +23,13 @@ describe Matriz do
 			@matrizA.abs.to_s.should == Matriz.new([[1,2],[3,4]]).to_s
 		end	  
 	end
+
+	context 'Comprobar los operaciones entre matrices' do
+
+		it "Se debe poder sumar dos matrices" do
+			(@matrizA + @matrizB).to_s.should == Matriz.new([[222,4], [6,8]]).to_s
+		end
+	  
+	end
   
 end

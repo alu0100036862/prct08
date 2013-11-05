@@ -39,4 +39,18 @@ class Matriz
         
         end
 
+	# Suma de matrices
+	def +(o)
+
+		suma = Array.new(matriz.size - 1)
+		for i in 0...matriz.size
+		   	suma[i] = Array.new(matriz[i].size - 1)
+			for j in 0...matriz[i].size
+				suma[i][j] = matriz[i][j] + o.matriz[i][j]
+			end
+		end
+		Matriz.new(suma)
+		
+	end
+
 end
