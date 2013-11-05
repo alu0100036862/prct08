@@ -55,6 +55,10 @@ describe Matriz do
 		it "Se debe poder restar dos matrices" do
 			(@matrizA - @matrizB).to_s.should == Matriz.new([[-220,0], [0,0]]).to_s
 		end
+		
+		it "Se debe poder multiplicar dos matrices" do
+			(@matrizA * @matrizB).to_s.should == Matriz.new([[227,10], [675,22]]).to_s
+		end
 	  
 	end
   

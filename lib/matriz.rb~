@@ -54,6 +54,20 @@ class Matriz
 
         end
 
+	#  Matriz opuesta (negada)
+        def -@
+
+                opuesta = Array.new(matriz.size - 1)
+                for i in 0...matriz.size
+                        opuesta[i] = Array.new(matriz[i].size - 1)
+                        for j in 0...matriz[i].size
+                                opuesta[i][j] = matriz[i][j] * -1
+                        end
+                end
+                Matriz.new(opuesta)
+
+        end
+
 	# Suma de matrices
 	def +(o)
 

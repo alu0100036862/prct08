@@ -96,4 +96,20 @@ class Matriz
 
         end
 
+	# Multiplicación de matrices
+	def *(o)
+
+		prod = Array.new(matriz.size - 1,0)
+		for i in 0...matriz[0].size 
+			prod[i] = Array.new(o.matriz.size,0)
+			for j in 0...o.matriz.size
+				for pos in 0...matriz.size
+					prod[i][j] = prod[i][j] + (matriz[i][pos] * o.matriz[pos][j])
+				end
+			end
+		end
+		Matriz.new(prod)
+
+	end
+
 end
