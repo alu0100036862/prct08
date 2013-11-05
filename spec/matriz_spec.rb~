@@ -22,13 +22,19 @@ describe Matriz do
 			@matrizA.respond_to?("filas").should == true
 		end
 
-
+		it "Se debe invocar al metodo columnas() para obtener el numero de columnas" do
+			@matrizA.respond_to?("columnas").should == true
+		end
 
 	end
 	context 'Comprobar metodos de conversion' do
 
 		it "Se debe mostrar la matriz" do
 			@matrizA.to_s.should == Matriz.new([[1,2],[3,4]]).to_s
+		end
+
+		it "Se debe convertir a punto flotantes" do
+			@matrizA.to_f.to_s.should == Matriz.new([[1.0,2.0],[3.0,4.0]]).to_s
 		end
 
 		it "Se debe convertir a valor absoluto" do

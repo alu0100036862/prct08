@@ -33,6 +33,10 @@ describe Matriz do
 			@matrizA.to_s.should == Matriz.new([[1,2],[3,4]]).to_s
 		end
 
+		it "Se debe convertir a punto flotantes" do
+			@matrizA.to_f.to_s.should == Matriz.new([[1.0,2.0],[3.0,4.0]]).to_s
+		end
+
 		it "Se debe convertir a valor absoluto" do
 			@matrizA.abs.to_s.should == Matriz.new([[1,2],[3,4]]).to_s
 		end	  
