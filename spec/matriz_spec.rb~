@@ -39,7 +39,11 @@ describe Matriz do
 
 		it "Se debe convertir a valor absoluto" do
 			@matrizA.abs.to_s.should == Matriz.new([[1,2],[3,4]]).to_s
-		end	  
+		end
+
+		it "Se debe convertir a su opuesta (negada)" do
+			(-@matrizA).to_s.should == Matriz.new([[-1,-2],[-3,-4]]).to_s
+		end 
 	end
 
 	context 'Comprobar los operaciones entre matrices' do

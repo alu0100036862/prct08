@@ -40,6 +40,20 @@ class Matriz
         
         end
 
+	#  Matriz en punto flotante
+        def to_f
+
+                flotante = Array.new(matriz.size - 1)
+                for i in 0...matriz.size
+                        flotante[i] = Array.new(matriz[i].size - 1)
+                        for j in 0...matriz[i].size
+                                flotante[i][j] = (matriz[i][j]).to_f
+                        end
+                end
+                Matriz.new(flotante)
+
+        end
+
 	# Suma de matrices
 	def +(o)
 
