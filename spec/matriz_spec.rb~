@@ -17,6 +17,12 @@ describe Matriz do
 		it "Se debe invocar al metodo matriz() para obtener la matriz" do
 			@matrizA.respond_to?("matriz").should == true
 		end
+		
+		it "Se debe invocar al metodo filas() para obtener el numero de filas" do
+			@matrizA.respond_to?("filas").should == true
+		end
+
+
 
 	end
 	context 'Comprobar metodos de conversion' do

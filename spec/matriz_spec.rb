@@ -22,7 +22,9 @@ describe Matriz do
 			@matrizA.respond_to?("filas").should == true
 		end
 
-
+		it "Se debe invocar al metodo columnas() para obtener el numero de columnas" do
+			@matrizA.respond_to?("columnas").should == true
+		end
 
 	end
 	context 'Comprobar metodos de conversion' do
