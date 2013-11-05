@@ -25,4 +25,18 @@ class Matriz
 
 	end
 
+        # Absoluto de matriz
+        def abs
+                
+                absoluto = Array.new(matriz.size - 1)
+                for i in 0...matriz.size            
+                        absoluto[i] = Array.new(matriz[i].size - 1)
+                        for j in 0...matriz[i].size
+                                absoluto[i][j] = (matriz[i][j]).abs
+                        end
+                end
+                Matriz.new(absoluto)
+        
+        end
+
 end
