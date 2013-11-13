@@ -2,6 +2,8 @@
 !# /usr/bin/ruby
 # matriz.rb
 
+require "racional"
+
 class Matriz
 
 	# Inicialización
@@ -20,9 +22,35 @@ class Matriz
 	# Convertimos a string
 	def to_s
 
-		matriz.each do | fila |
-			puts fila.to_s + "  "
-		end
+#		# Mostramos matriz de racionales
+#		if matriz[0][0].is_a? Racional then
+
+			fil = 0
+			print "["
+			while fil < filas
+
+				col = 0					
+				while col < columnas
+
+					print "#{matriz[fil][col].to_s}"
+					if (col + 1) < columnas then print ", " end
+					col += 1
+
+				end
+
+				if (fil + 1) < filas then print ", " end
+				fil += 1
+
+			end
+			print "]"
+
+#		elsif matriz[0][0].is_a? Numeric		
+
+#			matriz.each do | fila |
+#				puts fila.to_s + "  "
+#			end
+
+#		end
 
 	end
 
@@ -98,15 +126,14 @@ class Matriz
 
         # Resta de matrices
         def -(o)
-
-                resta = Array.new(matriz.size - 1)
+            resta = Array.new(matriz.size - 1)
                 for i in 0...matriz.size
-			resta[i] = Array.new(matriz[i].size - 1)
-			for j in 0...matriz[i].size
-				resta[i][j] = matriz[i][j] - o.matriz[i][j]
-			end
-                end
-                Matriz.new(resta)
+				resta[i] = Array.new(matriz[i].size - 1)
+					for j in 0...matriz[i].size
+					resta[i][j] = matriz[i][j] - o.matriz[i][j]
+				end
+            end
+            Matriz.new(resta)
 
         end
 

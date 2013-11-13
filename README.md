@@ -1,13 +1,30 @@
-Práctica        : Práctica de Laboratorio #8 - EQUIPO -
-Grupo           : LPP-T-45
-Alumnos         : DAILOS HERRERA BENCOMO
-                  MOHAMMED MAHRACH
-Asignatura      : LPP
-=====================
+# Practica9
 
+En esta práctica de laboratorio hay que entregar un "diseño" de la jerarquía de clases para representar 'matrices densas' y 'matrices dispersas'. 
+La "implementación" del código Ruby se ha de entregar en la siguiente.
+El diseño se ha de describir mediante un fichero "README.md" como este.
 
-Considere el desarrollo de una clase Ruby para representar Matrices. 
-1.-) Cree una clase para representar Matrices usando desarrollo dirigido por pruebas (Test Driven Development - TDD) con la herramienta Rspec. 
-2.-) Se ha es seguir la metodología de Integración continua (Continuos Integration) usando la herramienta Travis. 
-3.-) Además se ha de comprobar el funcionamiento de la aplicación con la herramienta Guard de comprobación continua (Continuous testing) de manera que permita la ejecución de las pruebas definidas con rspec cuando se modifiquen. Puede ver un ejemplo en:  git@github.com:coromoto/CT-Point.git
-4.-) Indique la URL (HTTP) del repositorio que ha desarrollado.
+## Comandos
+
+1. El fichero "README.md" aparece al crear el esqueleto de una Gema con el siguiente comando:
+
+    coromoto@lpp:~/$ bundle gem -b Practica9
+       create  Practica9/Gemfile
+       create  Practica9/Rakefile
+       create  Practica9/LICENSE
+       create  Practica9/README.md
+       create  Practica9/.gitignore
+       create  Practica9/Practica9.gemspec
+       create  Practica9/lib/Practica9.rb
+       create  Practica9/lib/Practica9/version.rb
+       create  Practica9/bin/Practica9
+    Initializating git repo in /var/lib/stickshift/525542d44382ec83d700024c/app-root/data/641307/Practica9
+    coromoto@lpp:~/$ 
+
+2. Modifique "README.md" para añadir la descripción de la jerarquía de clases propuesta
+
+3. Añada los cambios al repositorio git
+
+4. Empuje los cambios en un repositorio remoto
+
+5. En la tarea del campus virtual especifique la URL del respositorio remoto.
